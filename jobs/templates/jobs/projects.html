@@ -48,15 +48,15 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="http://127.0.0.1:8000">Adam Strotman</a>
+        <a class="navbar-brand" href="#">Adam Strotman</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml-auto">
                     <a class="nav-link " href="#">Resume</a>
-                    <a class="nav-link" href="http://127.0.0.1:8000/projects/">Projects</a>
-                    <a class="nav-link" href="http://127.0.0.1:8000/blog/">Blog</a>
+                    <a class="nav-link active" href="#">Projects</a>
+                    <a class="nav-link " href="#">Blog</a>
                     <!--<a class="nav-link" href="#">Pricing</a>-->
                     <!--<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>-->
                 </div>
@@ -66,34 +66,24 @@
 
 </header>
 
-<main>
-
-  <section class="py-5 text-center container">
-    <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Adam Strotman</h1>
-        <p class="lead text-muted">Hello I am a Sophomore at the University of Dayton Majoring in Computer Information Systems and Minoring in Cyber Security Management. Comfortable using Java, Python, HTML and CSS. Excited to learn new skills while bringing a positive impact to the team.</p>
-        <p>
-          <a href="mailto:strotmana2@udayton.edu" class="btn btn-primary my-2">Email</a>
-          <!--<a href="#" class="btn btn-secondary my-2">Secondary action</a>-->
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <div class="album py-5 bg-light">
+<main role="main">
     <div class="container">
-
+        <h1 class="text-center">Adam's Projects</h1>
+        <br/>
+        <br/>
+        <hr/>
+        <br/>
+     <div class="album py-5 bg-light">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         {% for job in jobs.all %}
-        <div class="col">
-          <div class="card shadow-sm">
-            <img class="card-img-top" src="{{job.image.url}}"/>
-            <div class="card-body">
-              <p class="card-text"> {{ job.text }}</p>
+            <div class="col">
+            <div class="card shadow-sm">
+                <img class="card-img-top" src="{{job.image.url}}"/>
+                <div class="card-body">
+                <p class="card-text"> {{ job.text }}</p>
+                </div>
             </div>
-          </div>
-        </div>
+            </div>
         {% endfor %}
         
 
@@ -110,3 +100,4 @@
       
   </body>
 </html>
+
