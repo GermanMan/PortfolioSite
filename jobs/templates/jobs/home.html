@@ -1,7 +1,9 @@
 
 <!doctype html>
 <html lang="en">
+
   <head>
+    {% load static %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -48,13 +50,14 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="http://127.0.0.1:8000">Adam Strotman</a>
+        <a class=" navbar-brand" href="http://127.0.0.1:8000">Adam Strotman</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml-auto">
-                    <a class="nav-link " href="#">Resume</a>
+                    <a class="nav-link" href="http://127.0.0.1:8000">Home</a>
+                    <a class="nav-link " href="{% static 'resume.pdf'%}">Resume</a>
                     <a class="nav-link" href="http://127.0.0.1:8000/projects/">Projects</a>
                     <a class="nav-link" href="http://127.0.0.1:8000/blog/">Blog</a>
                     <!--<a class="nav-link" href="#">Pricing</a>-->
@@ -77,6 +80,7 @@
           <a href="mailto:strotmana2@udayton.edu" class="btn btn-primary my-2">Email</a>
           <!--<a href="#" class="btn btn-secondary my-2">Secondary action</a>-->
         </p>
+        <img src="{% static 'ProfilePic.png' %}" height= '450' width='300'/>
       </div>
     </div>
   </section>
